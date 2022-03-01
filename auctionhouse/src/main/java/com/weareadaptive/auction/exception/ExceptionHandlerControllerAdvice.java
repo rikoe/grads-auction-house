@@ -27,13 +27,6 @@ public class ExceptionHandlerControllerAdvice {
         BAD_REQUEST);
   }
 
-  @ExceptionHandler(NotFoundException.class)
-  public ResponseEntity<Object> handleNotFoundException(
-      NotFoundException ex) {
-
-    return ResponseEntity.notFound().build();
-  }
-
   @ExceptionHandler(BusinessException.class)
   public ResponseEntity<Object> handleNotFoundException(
       BusinessException ex) {
