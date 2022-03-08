@@ -1,15 +1,15 @@
 package com.weareadaptive.auction.service;
 
 import com.weareadaptive.auction.model.User;
-import com.weareadaptive.auction.model.UserState;
+import com.weareadaptive.auction.repository.UserRepository;
 import org.springframework.stereotype.Service;
 
 @Service
 public class UserService {
-  private final UserState userState;
+  private final UserRepository userState;
 
-  public UserService(UserState userState) {
-    this.userState = userState;
+  public UserService(UserRepository userRepository) {
+    this.userState = userRepository;
   }
 
   public User create(String username, String password, String firstName, String lastName,
